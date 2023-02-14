@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MyApp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+        Log.i(TAG, "Test info (Log.i)");
+        Log.e(TAG, "Test error (Log.e)");
+        Log.w(TAG, "Test warning (Log.w)");
+        Log.d(TAG, "Test debug (Log.d)");
+        Log.v(TAG, "Test verbose (Log.v)");
+
 
     }
 
